@@ -1,0 +1,8 @@
+/* add custom styles */
+.flexContainer {
+  display: flex;
+}
+
+.box {
+  margin: 0 auto;
+}

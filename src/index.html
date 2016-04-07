@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='earningsCalculator'>
+  <head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <!-- sample angular code -->
+
+    <div class="flexContainer">
+      <div class="box">
+        <header>
+          <h1>Earnings Calculator</h1>
+          <ul>
+            <li><a href="#/details">Meal Details</a></li>
+            <li><a href="#/charge">Charge Overview</a></li>
+            <li><a href="#/earnings">Earnings Info</a></li>
+          </ul>
+        </header>
+
+        <div ng-view></div>
+
+        <footer ng-controller="resetCtrl">
+          <hr>
+          <a href="#/details"><button ng-click="reset()" class="btn btn-default">Reset All</button></a>
+        </footer>
+      </div>
+    </div>
+      
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+  </body>
+</html>
