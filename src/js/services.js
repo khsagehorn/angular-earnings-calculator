@@ -11,7 +11,10 @@ app.service('mealDataService', [function(){
     getMeals: function(){
       return meals;
     },
+
+    
     getCumulativeTotals: function(){
+
       
       return totals;
 
@@ -28,12 +31,23 @@ app.service('mealDataService', [function(){
 
     getNextMeal: function(){
 
+      if (mealCount < meals.length){
+        return meals[mealCount+1];
+      }
+
+    },
+
+    getPreviousMeal: function(){
+      if (mealCount > meals.length){
+        return meals[mealCount-1]
+      }
     },
 
     addMeal: function(obj){
       meals.push(obj)
       mealCount = mealCount + 1;
     },
+
     resetAll: function(){
       meals = {};
       mealCount = 1;
