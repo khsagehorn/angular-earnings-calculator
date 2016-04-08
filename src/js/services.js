@@ -5,19 +5,15 @@ app.service('mealDataService', [function(){
 
   ];
   var totals = {};
-  var mealCount = meals.length + 1;
+  var mealCount = meals.length;
 
   return {
     getMeals: function(){
       return meals;
     },
 
-    
     getCumulativeTotals: function(){
-
-      
       return totals;
-
     },
 
     getMealCount: function(){
@@ -25,21 +21,18 @@ app.service('mealDataService', [function(){
     },
 
     getMeal: function(){
-      return meals[0];
-
+      return meals[mealCount - 1];
     },
 
     getNextMeal: function(){
-
       if (mealCount < meals.length){
         return meals[mealCount+1];
       }
-
     },
 
     getPreviousMeal: function(){
       if (mealCount > meals.length){
-        return meals[mealCount-1]
+        return meals[mealCount-1];
       }
     },
 
@@ -49,7 +42,7 @@ app.service('mealDataService', [function(){
     },
 
     resetAll: function(){
-      meals = {};
+      meals = [];
       mealCount = 1;
 
     }

@@ -2,7 +2,7 @@
     <div class="formBox">
       <form name="newMeal" ng-submit="formSubmit()">
         <fieldset class="form-group">
-          <h3>Enter details for meal {{mealCount}}</h3>
+          <h3>Enter details for meal {{mealCount + 1}}</h3>
           <label for="price">Base Meal Price: $</label>
           <input type="text" class="form-control" name="price" placeholder="0.00" ng-model="meal.price"></input><br>
           <label for="tax">Tax Rate: %</label>

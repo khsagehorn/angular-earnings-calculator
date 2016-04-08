@@ -15,11 +15,13 @@ app.controller('detailsCtrl', ['$scope', 'mealDataService', function($scope, mea
 }]);
 
 app.controller('chargesCtrl', ['$scope', 'mealDataService', function($scope, mealDataService) {
+  // retrieve data from service functions
   $scope.mealCount = mealDataService.getMealCount();
   $scope.meals = mealDataService.getMeals();
   $scope.meal = mealDataService.getMeal();
   $scope.getPreviousMeal = mealDataService.getPreviousMeal();
   $scope.getNextMeal = mealDataService.getNextMeal();
+  // assign scope variables to values from mealData
   $scope.tip = $scope.meal.tip/100 * $scope.meal.price;
   $scope.total = $scope.meal.price + $scope.tip;
 
@@ -35,6 +37,6 @@ app.controller('earningsCtrl', ['$scope', 'mealDataService', function($scope, me
 app.controller('resetCtrl', ['$scope', 'mealDataService', function($scope, mealDataService) {
   $scope.reset = function(){
     mealDataService.resetAll();
-  }
+  };
   
 }]);
